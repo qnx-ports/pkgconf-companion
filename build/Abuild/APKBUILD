@@ -2,7 +2,7 @@
 # Alpine-Maintainer: Ariadne Conill <ariadne@dereferenced.org>
 pkgname=pkgconf
 pkgver=2.3.0
-pkgrel=0
+pkgrel=${pkgrel:-0}
 pkgdesc="development framework configuration tools"
 url="https://gitea.treehouse.systems/ariadne/pkgconf"
 arch="all"
@@ -49,6 +49,7 @@ dev() {
 }
 
 
+options="$options ${DISABLE_CHECK:+!check}"
 sha512sums="
 869fe0a7a2e06e9da37ff672b991dad60a9a7c9df2c65b78b2aa70dba10920650fb946d5a9c8019ea54a510835acc2eb4244092fa36d0339bd6764ff84e8542c  pkgconf-2.3.0.tar.xz
 "
